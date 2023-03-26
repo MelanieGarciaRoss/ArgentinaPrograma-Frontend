@@ -1,0 +1,14 @@
+.hero-container {
+	width: 100%;
+    height: 90%;
+    background-color: #e3dac9;
+    position: absolute;
+}
+
+form {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    border-radius: .50rem;
+
+}

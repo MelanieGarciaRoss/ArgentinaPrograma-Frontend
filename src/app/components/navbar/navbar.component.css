@@ -1,0 +1,19 @@
+.navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes {
+    margin-right: 0.7em;
+    margin-left: 0.7em;
+
+}
+
+.redes img {
+    margin: 0.5em;
+}
+
+.btn {
+    border-width: medium;
+}

@@ -1,0 +1,14 @@
+.row{
+    padding: 20px;
+    margin-bottom: 3rem!important;
+}
+
+#educacion{
+    text-align: center;
+    box-shadow: 2px -2px 5px #999 ;
+    background-color: rgb(244, 237, 228);
+}
+
+.seccion{
+    background-color: rgb(244, 237, 228);
+}

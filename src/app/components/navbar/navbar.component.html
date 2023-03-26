@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="logo">
+        <img class="mr-3" src="../../../assets/APLogo-20.png" alt="Logo" height="55">
+    </div>
+    <div class="redes">
+        <a href="https://github.com/MelanieGarciaRoss">
+            <img src="https://s.yimg.com/fz/api/res/1.2/td_p80JCQN5sy1Pvd6NxiA--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTEyMDtxPTgwO3c9MTIw/https://s.yimg.com/zb/imgv1/c3049d07-7bac-37c5-9279-c641519a6573/t_500x300"
+                alt="Logo" width="30" class="img-fluid">
+        </a>
+        <a href="https://www.linkedin.com/in/melanie-charlotte-garcia-ross-8167a0238/">
+            <img src="https://s.yimg.com/fz/api/res/1.2/6.1sJqIySlxah724K1v9xA--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTEyMDtxPTgwO3c9MTIw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
+                alt="Logo" width="30" class="img-fluid">
+        </a>
+        <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">LogIn</button>
+        <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">LogOut</button>
+    </div>
+</nav>

@@ -1,0 +1,54 @@
+
+<div class="card px-4 py-4 mx-3 d-lg-flex bg-dark mt-5">
+    <div class="card px-4 py-4 mx-3 d-lg-flex bg-light.bg-gradient">
+      <h1>Experiencia</h1>
+      <section id="experiencia" class="experiencia text-black">
+        <div class="seccion container-fluid rounded shadow-sm p-3 mb-5 bg-body-transparent rounded"  [ngClass]="{fondouser : isLogged}">
+          <div class="row mb-2">
+            <div class="col-auto me-auto mt-1">
+         
+            <a href="#top">
+              <button type="button" class="btn btn-close-white">
+                <i class="fa-solid fa-arrow-turn-up"></i>
+              </button>
+            </a>
+        
+            </div>              
+            <div class="d-flex col-auto mt-1">               
+                <button type="submit" *ngIf="isLogged" class="btn btn-close-white" 
+                  data-bs-toggle="modal" data-bs-target="#experienciaModalAdd">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+          </div>
+          <div class="row" *ngFor="let experiencia of experiencias">
+            <div class="col-3">
+              <a [href]="experiencia.url" target="_blank"><img [src]="experiencia.imagen" class="w-50 imgExp"  [alt]="experiencia.empresa"></a> <br>
+              <h5>{{experiencia.puesto}}</h5>
+              <h6>{{experiencia.inicio | date:"dd-MM-yyyy"}}</h6>
+              <h6>{{experiencia.fin  | date:"dd-MM-yyyy"}}</h6>
+            </div>
+            <div class="col-8" >
+              <h4>{{experiencia.descripcion}}</h4>
+            </div>
+                <div class="col-0 p-0 mt-1 mb-1 mr-2 ml-2">
+                  <button type="submit" *ngIf="isLogged" class="btn btn-outline-primary" 
+                    (click)="editar(experiencia.id)">Editar<i
+                    class="fa-solid fa-trash-can"></i>
+                  </button>
+                
+                  <button type="submit" *ngIf="isLogged" class="btn btn-outline-primary" 
+                    (click)="delete(experiencia.id)">Eliminar<i
+                    class="fa-solid fa-trash-can"></i>
+                  </button>
+                </div>  
+                <br><hr class="col-11">    
+            </div>
+            <button type="submit" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="##experienciaModalEd" 
+              class="btn btn-outline-primary" (click)="agregar()">Agregar<i
+              class="fa-solid fa-trash-can"></i>
+            </button>  
+          </div>
+        </section> 
+      </div>
+</div>
