@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Estudio } from '../entidades/estudio';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EstudioService {
 
-  url='http://localhost:8080/estudios/'
+  url= environment.baseUrl + '/estudios/'
   constructor(private httpClient:HttpClient) { }
   public lista(): Observable<Estudio[]>{
     return this.httpClient.get<Estudio[]>(this.url + 'lista');

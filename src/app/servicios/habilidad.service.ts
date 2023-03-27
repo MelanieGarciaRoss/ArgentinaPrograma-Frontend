@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Habilidad } from '../entidades/habilidad';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HabilidadService {
-  url='http://localhost:8080/habilidad/';
+  url=  environment.baseUrl + '/habilidad/';
   
-
   constructor(private httpClient: HttpClient) { }
   public lista(): Observable<Habilidad[]>{
     return this.httpClient.get<Habilidad[]>(this.url + 'lista');

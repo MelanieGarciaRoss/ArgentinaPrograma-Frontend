@@ -18,5 +18,10 @@
         <p>{{persona?.sobreMi}}</p>
       </div>
     </div>
+    <div class="col-0 p-0 mt-1 mb-1 mr-2 ml-2">
+      <button type="submit" *ngIf="isLogged" class="btn btn-outline-primary" (click)="editar(1)">Editar<i
+        class="fa-solid fa-trash-can"></i>
+      </button>
+    </div>
   </section>
 </div>

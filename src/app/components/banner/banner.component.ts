@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/entidades/persona';
 import { PersonaService } from 'src/app/servicios/persona.service';
 import { TokenService } from 'src/app/servicios/token.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-banner',
@@ -12,7 +13,7 @@ import { TokenService } from 'src/app/servicios/token.service';
 export class BannerComponent implements OnInit{
   persona: Persona | undefined;
   isLogged: boolean=false;
-  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
+  constructor(public personaService: PersonaService, private tokenService: TokenService, private router: Router) { }
   
   ngOnInit(): void {
     this.cargarPersona();
@@ -30,6 +31,10 @@ export class BannerComponent implements OnInit{
         this.persona=data;
         console.log(data);
       });
+  }
+
+  editar(id:number | undefined) {
+    this.router.navigate([`/editPersona/${id}`])
   }
 
 }

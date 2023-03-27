@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Persona } from '../entidades/persona'
+import { Persona } from '../entidades/persona';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonaService {
-  URL='http://localhost:8080/persona/';
+  URL= environment.baseUrl + '/persona/';
   constructor(private httpClient: HttpClient) { }
   
   public lista(): Observable<Persona[]>{

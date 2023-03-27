@@ -25,6 +25,10 @@ import { ModalEditarExpComponent } from './modales/modal-editar-exp/modal-editar
 import { ModalExperienciaComponent } from './modales/modal-experiencia/modal-experiencia.component';
 import { ModalHabilidadComponent } from './modales/modal-habilidad/modal-habilidad.component';
 import { ModalEditarHabComponent } from './modales/modal-editar-hab/modal-editar-hab.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { ModalPersonaComponent } from './modales/modal-editar-persona/modal-persona.component';
 
 
 @NgModule({
@@ -45,6 +49,7 @@ import { ModalEditarHabComponent } from './modales/modal-editar-hab/modal-editar
     ModalExperienciaComponent,
     ModalHabilidadComponent,
     ModalEditarHabComponent,
+    ModalPersonaComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +57,7 @@ import { ModalEditarHabComponent } from './modales/modal-editar-hab/modal-editar
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     interceptorProvider
